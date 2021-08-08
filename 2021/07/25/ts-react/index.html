@@ -16,7 +16,13 @@
     <!--icon-->
 
     
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
     
     
     
@@ -33,15 +39,15 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="React.FCReact.FC&lt;&gt;的在typescript使用的一个泛型，FC就是FunctionComponent的缩写，是函数组件，在这个泛型里面可以使用useState，个人觉得useState挺好用的，例子如下： 12345678const SampleModel: React.FC&lt;&amp;#123;&amp;#125;&gt; &#x3D; () &#x3D;&gt;&amp;#123;   &#x2F;&#x2F;React">
+    <meta name="description" content="React.FCReact.FC&lt;&gt;的在typescript使用的一个泛型，FC就是FunctionComponent的缩写，是函数组件，在这个泛型里面可以使用useState，个人觉得useState挺好用的，例子如下： const SampleModel: React.FC&lt;&amp;#123;&amp;#125;&gt; &#x3D; () &#x3D;&gt;&amp;#123;   &#x2F;&#x2F;React.FC&lt;&gt;为types">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TypeScript React开发笔记">
 <meta property="og:url" content="https://blogshengxiang.ml/2021/07/25/ts-react/index.html">
 <meta property="og:site_name" content="DarkFlameMaster&#39;s Blog">
-<meta property="og:description" content="React.FCReact.FC&lt;&gt;的在typescript使用的一个泛型，FC就是FunctionComponent的缩写，是函数组件，在这个泛型里面可以使用useState，个人觉得useState挺好用的，例子如下： 12345678const SampleModel: React.FC&lt;&amp;#123;&amp;#125;&gt; &#x3D; () &#x3D;&gt;&amp;#123;   &#x2F;&#x2F;React">
+<meta property="og:description" content="React.FCReact.FC&lt;&gt;的在typescript使用的一个泛型，FC就是FunctionComponent的缩写，是函数组件，在这个泛型里面可以使用useState，个人觉得useState挺好用的，例子如下： const SampleModel: React.FC&lt;&amp;#123;&amp;#125;&gt; &#x3D; () &#x3D;&gt;&amp;#123;   &#x2F;&#x2F;React.FC&lt;&gt;为types">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-25T18:46:33.369Z">
-<meta property="article:modified_time" content="2021-07-26T16:22:59.478Z">
+<meta property="article:modified_time" content="2021-08-07T21:40:00.752Z">
 <meta property="article:author" content="therealdarkflamemaster">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -52,7 +58,9 @@
 
     
     
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none">
+        <link rel="stylesheet" id="hl-default-theme" href="https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/a11y-light.min.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/a11y-dark.min.css" media="none">
         
     
 
@@ -60,6 +68,13 @@
     
 
     
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/dark.min.css">
+
+    
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/darkmode.min.js"></script>
+
+
 
      
 
@@ -72,22 +87,22 @@
             <header class="header">
     <div class="header__left">
         <a href="/" class="button">
-            <span class="logo__text">Demo</span>
+            <span class="logo__text">DarkFlameMaster&#39;s Blog</span>
         </a>
     </div>
     <div class="header__right">
         
             <div class="navbar__menus">
                 
-                    <a href="/" class="navbar-menu button">首页</a>
+                    <a href="/" class="navbar-menu button">MAIN</a>
                 
-                    <a href="/tags/" class="navbar-menu button">标签</a>
+                    <a href="/tags/" class="navbar-menu button">TAG</a>
                 
-                    <a href="/archives/" class="navbar-menu button">归档</a>
+                    <a href="/archives/" class="navbar-menu button">ARCHIVE</a>
                 
-                    <a href="/friends/" class="navbar-menu button">友链</a>
+                    <a href="/friends/" class="navbar-menu button">FRIEND</a>
                 
-                    <a href="/page/" class="navbar-menu button">Page</a>
+                    <a href="/page/" class="navbar-menu button">PAGE</a>
                 
             </div>
         
@@ -96,20 +111,24 @@
 
         
         
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
 
         
             <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
             <div class="dropdown-menus" id="dropdown-menus">
                 
-                    <a href="/" class="dropdown-menu button">首页</a>
+                    <a href="/" class="dropdown-menu button">MAIN</a>
                 
-                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                    <a href="/tags/" class="dropdown-menu button">TAG</a>
                 
-                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                    <a href="/archives/" class="dropdown-menu button">ARCHIVE</a>
                 
-                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                    <a href="/friends/" class="dropdown-menu button">FRIEND</a>
                 
-                    <a href="/page/" class="dropdown-menu button">Page</a>
+                    <a href="/page/" class="dropdown-menu button">PAGE</a>
                 
             </div>
         
@@ -140,36 +159,133 @@
 </div>
 
 
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React-FC"><span class="toc-text">React.FC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%88%993WC%E4%B9%8B-aria-label"><span class="toc-text">准则3WC之 aria-label</span></a></li></ol>
+        </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc" tabindex="0">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">Article Directory</div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React-FC"><span class="toc-text">React.FC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%88%993WC%E4%B9%8B-aria-label"><span class="toc-text">准则3WC之 aria-label</span></a></li></ol>
+    </div>
 
-<article class="post content-card">
+
+<article class="post post__with-toc content-card">
     <div class="post__header"></div>
     <div class="post__content">
         <h2 id="React-FC"><a href="#React-FC" class="headerlink" title="React.FC"></a><code>React.FC</code></h2><p><code>React.FC&lt;&gt;</code>的在<strong>typescript使用的一个泛型，FC就是<code>FunctionComponent</code>的缩写</strong>，是函数组件，在<strong>这个泛型里面可以使用useState</strong>，个人觉得useState挺好用的，例子如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const SampleModel: React.FC&lt;&#123;&#125;&gt; = () =&gt;&#123;   //React.FC&lt;&gt;为typescript使用的泛型</span><br><span class="line">    const [createModalVisible, handleModalVisible] = useState&lt;boolean&gt;(false); </span><br><span class="line">    return&#123;</span><br><span class="line">    &#123;/** 触发模态框**/&#125;</span><br><span class="line">    &lt;Button style=&#123;&#123;fontSize:&#x27;25px&#x27;&#125;&#125;  onClick=&#123;()=&gt;handleModalVisible(true)&#125; &gt;样例&lt;/Button&gt;</span><br><span class="line">    &#123;/** 模态框组件**/&#125;</span><br><span class="line">    &lt;Model onCancel=&#123;() =&gt; handleModalVisible(false)&#125; ModalVisible=&#123;createModalVisible&#125; /&gt; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<pre class="language-tsx" data-language="tsx"><code class="language-tsx"><span class="token keyword">const</span> SampleModel<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">&#123;</span>   <span class="token comment">//React.FC&lt;>为typescript使用的泛型</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>createModalVisible<span class="token punctuation">,</span> handleModalVisible<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">return</span><span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#123;</span><span class="token comment">/** 触发模态框**/</span><span class="token punctuation">&#125;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>fontSize<span class="token operator">:</span><span class="token string">'25px'</span><span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span>  <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token function">handleModalVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">></span></span><span class="token plain-text">样例</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span>
+    <span class="token punctuation">&#123;</span><span class="token comment">/** 模态框组件**/</span><span class="token punctuation">&#125;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Model</span></span> <span class="token attr-name">onCancel</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">handleModalVisible</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span> <span class="token attr-name">ModalVisible</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span>createModalVisible<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span> 
+  <span class="token punctuation">&#125;</span></code></pre>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">interface ICardMenu &#123;</span><br><span class="line">    icon: string;</span><br><span class="line">    alt: string;</span><br><span class="line">    path: string;</span><br><span class="line">    src: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const CardMenu: FC&lt;ICardMenu&gt; = (&#123; icon, path, alt, src &#125;: ICardMenu) =&gt; &#123;</span><br><span class="line">    const &#123; t &#125; = useTranslation();</span><br><span class="line">    const role = useSelector(selectRole);</span><br><span class="line">    const [isActive, setActive] = useState(false);</span><br><span class="line">    const videoRef = useRef&lt;HTMLVideoElement&gt;(null);</span><br><span class="line"></span><br><span class="line">    const playVideo = () =&gt; videoRef?.current?.play();</span><br><span class="line"></span><br><span class="line">    const pauseVideo = () =&gt; videoRef?.current?.pause();</span><br><span class="line"></span><br><span class="line">    const switchVideo = () =&gt; (videoRef?.current?.paused ? playVideo() : pauseVideo());</span><br><span class="line"></span><br><span class="line">    function handleToggleVideo() &#123;</span><br><span class="line">        setActive(!isActive);</span><br><span class="line">        switchVideo();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">        &lt;li className=&quot;card-menu&quot;&gt;</span><br><span class="line">				...</span><br></pre></td></tr></table></figure>
+<pre class="language-tsx" data-language="tsx"><code class="language-tsx"><span class="token keyword">interface</span> <span class="token class-name">ICardMenu</span> <span class="token punctuation">&#123;</span>
+    icon<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    alt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    path<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    src<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-<h2 id="准则3WC之-aria-label"><a href="#准则3WC之-aria-label" class="headerlink" title="准则3WC之 aria-label"></a>准则3WC之 <code>aria-label</code></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;button</span><br><span class="line">    type=&quot;button&quot;</span><br><span class="line">    className=&#123;`control-button $&#123;isActive ? &#x27;pause-button&#x27; : &#x27;play-button&#x27;&#125;`&#125;</span><br><span class="line">    onClick=&#123;handleToggleVideo&#125;</span><br><span class="line">    aria-label=&#123;t(&#x27;aria_label_play&#x27;)&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<span class="token keyword">const</span> CardMenu<span class="token operator">:</span> <span class="token constant">FC</span><span class="token operator">&lt;</span>ICardMenu<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">&#123;</span> icon<span class="token punctuation">,</span> path<span class="token punctuation">,</span> alt<span class="token punctuation">,</span> src <span class="token punctuation">&#125;</span><span class="token operator">:</span> ICardMenu</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> t <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">useTranslation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> role <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span>selectRole<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>isActive<span class="token punctuation">,</span> setActive<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> videoRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLVideoElement<span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">playVideo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> videoRef<span class="token operator">?.</span>current<span class="token operator">?.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">pauseVideo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> videoRef<span class="token operator">?.</span>current<span class="token operator">?.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token function-variable function">switchVideo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>videoRef<span class="token operator">?.</span>current<span class="token operator">?.</span>paused <span class="token operator">?</span> <span class="token function">playVideo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">pauseVideo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">handleToggleVideo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">setActive</span><span class="token punctuation">(</span><span class="token operator">!</span>isActive<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">switchVideo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+				...
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">&#125;</span></code></pre>
+
+<h2 id="准则3WC之-aria-label"><a href="#准则3WC之-aria-label" class="headerlink" title="准则3WC之 aria-label"></a>准则3WC之 <code>aria-label</code></h2><pre class="language-tsx" data-language="tsx"><code class="language-tsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+    <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">control-button </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>isActive <span class="token operator">?</span> <span class="token string">'pause-button'</span> <span class="token operator">:</span> <span class="token string">'play-button'</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">&#125;</span></span>
+    <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span>handleToggleVideo<span class="token punctuation">&#125;</span></span>
+    <span class="token attr-name">aria-label</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token string">'aria_label_play'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span>
+<span class="token punctuation">/></span></span></code></pre>
 
 <p><code>aria-label</code>属性用来给当前元素加上的<strong>标签描述</strong>，接受字符串作为参数。</p>
 <p>The <code>aria-invalid</code> attribute is used to indicate that the value entered into an input field does not conform to the format expected by the application.</p>
 <p>4.css实现menu置顶，并且不干扰其他的元素相对位置</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header-auth</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: sticky;  <span class="comment">// 既是 fixed 又是 absolute</span></span><br><span class="line">  <span class="attribute">position</span>: -webkit-sticky;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;   <span class="comment">// 配合 sticky 生效</span></span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">9999</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="variable">$green</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="variable">$header-height</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="selector-class">.header-logo</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: url(<span class="string">&#x27;../Logo.svg&#x27;</span>) no-repeat center center;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">183px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="language-scss" data-language="scss"><code class="language-scss"><span class="token selector">.header-auth </span><span class="token punctuation">&#123;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> sticky<span class="token punctuation">;</span>  <span class="token comment">// 既是 fixed 又是 absolute</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> -webkit-sticky<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>   <span class="token comment">// 配合 sticky 生效</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 9999<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$green</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span><span class="token variable">$header-height</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token selector">.header-logo </span><span class="token punctuation">&#123;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url</span><span class="token punctuation">(</span><span class="token string">'../Logo.svg'</span><span class="token punctuation">)</span> no-repeat center center<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 183px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2021-07-26</p></div> 
+    <div class="post-footer__meta"><p>updated at 2021-08-07</p></div> 
     <div class="post-entry__tags"></div> 
 </article>
 
 
 
 
+    <div class="post__comments post__with-toc content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    <div id="disqus_thread">Unable to load Disqus, please make sure your network can access.</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    </div>
+
 
 
 </main>
 
             <footer class="footer">
-    
+     
+    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
     
 
 
@@ -189,7 +305,15 @@
 </footer>
 
         </div>
-         
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
+    </script>
+ 
 
  
 
@@ -221,6 +345,62 @@
 
  
 
+
+    
+    <script>
+        function loadComment() {
+            window.disqus_config = function () {
+                this.page.url = 'https://blogshengxiang.ml/2021/07/25/ts-react/';
+                this.page.identifier = '2021/07/25/ts-react/';
+            };
+            (function(){
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + 'https-therealdarkflamemaster-github-io' + '.disqus.com/embed.js';
+                (document.head || document.body).appendChild(dsq);
+            })();
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
 
 
 
